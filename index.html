@@ -1,472 +1,476 @@
 <!DOCTYPE html>
-<html lang="ko">  <!-- 한국어로 바꿔줌 -->
+<html lang="ko">
+<!-- 한국어로 바꿔줌 -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Resume of Juyeon Lee</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume of Juyeon Lee</title>
 </head>
+
 <body>
-  <br>
-  <div class="main-box">
-    <div class="title-box">
-      <h1>Juyeon Lee</h1>
-      <p>iOS Engineer </p>
+    <br>
+    <div class="main-box">
+        <div class="title-box">
+            <h1>Juyeon Lee</h1>
+            <p>iOS Engineer </p>
+        </div>
+
+        <section>
+            <h2>CONTACT</h2>
+            <p>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:juyeonlee@me.com">juyeonlee@me.com</a>
+            </p>
+            <p>
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <a href="https://www.github.com/ssauma">Github</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>SKILLS</h2>
+            <div class="float-wrap">
+                <p class="desc-text">Swift</p>
+                <p class="desc-text">Objective-C</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>ABOUT ME</h2>
+            <p class="about-me-text">iPhone OS 3.1.2부터 지금까지 iOS개발자 이주연입니다.</p>
+        </section>
+
+        <section>
+            <h2>EXPERIENCE</h2>
+            <div class="float-wrap">
+                <p class="title-text">Foldio 360 macOS App</p>
+                <p class="year-text">22.4 ~ 22.7</p>
+            </div>
+            <p class="desc-text">오랜지몽키 코리아</p>
+            <p class="desc-text">Image Editor (Swift, AppKit, SwiftUI)</p>
+            <p class="desc-subtext">1인 개발.</p>
+            <p class="desc-subtext">이미지를 여러장 입력받아 필터링과 크롭, 워터마크 블랜딩을 거친 후, 순차적으로 재생하는 GIF, MP4로 export를 수행하는 앱</p>
+            <p class="desc-subtext">OpenCV와 GPUImage를 기반으로 제작되고있던 앱의 성능개선과 완성을 진행.</p>
+
+            <p class="desc-subtext">기존 필터적용과 크롭 방식이 CGImage를 순차적으로 생성하는 방식으로 실시간으로 변경된 이미지를 확인하기가 어렵고, export task 수행 시간이 32장 기준으로 5분 이상 소요.</p>
+
+            <p class="desc-subtext">기존 코드에서 OpenCV의 용도가 이미지 크롭과 앱 내부 필터 중 1개의 기능만 사용하는것을 확인.</p>
+            <p class="desc-subtext">GPUImage는 Obj-C, OpenGL을 활용한 이미지 프로세싱 오픈소스로 활동이 저조하며, 2018년 Apple이 OpenGL을 deprecate하여 Metal기반 오픈소스로 변경하기로 결정.</p>
+
+            <p class="desc-subtext">앱을 사용하는 중 이미지들을 프로젝트 형태로 저장하기 위해서 Document-Based App으로 프로젝트를 신규 생성</p>
+            <p class="desc-subtext">해당 Document는 foldio라는 확장자를 갖는 패키지 형태로 정보를 담는 json파일과 임포트한 이미지, 워터마크이미지를 저장하도록 함</p>
+
+            <p class="desc-subtext">변경되는 라이브러리로 인한 문제가 발생할 경우 타 라이브러리나 GPUImage로 회귀할 경우를 고려하여 렌터링 모듈을 DI형태로 전달하여 사용하기 위해 결국 기존 프로젝트를 버리고 새로 구성</p>
+            <p class="desc-subtext">라이브러리는 최근에 활동이 있고, 실제 프로덕트 레벨에서 레퍼런스가 존재하는 것으로 하기로하고 MetalPetal을 사용하기로 결정.
+                기존 OpenCV에서 사용하던 기능 중 필터1개는 Fragment Shader프로그램을 간단히 작성</p>
+
+            <p class="desc-subtext">앱 완성 후 임포트한 이미지에 필터적용 시간은 실시간처리됨.</p>
+            <p class="desc-subtext">export는 기존 300s -> 10s로 향상.</p>
+            <a href="https://apps.apple.com/kr/app/foldio360-edit/id1643839760?mt=12">AppStore</a>
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Foldio 360 macOS App</p>
+                <p class="year-text">22.8 ~ 22.9</p>
+            </div>
+            <p class="desc-text">오랜지몽키 코리아</p>
+            <p class="desc-text">BLE Device control (Swift, SwiftUI)</p>
+            <p class="desc-subtext">1인 개발.</p>
+            <p class="desc-subtext">사진촬영용 턴테이블 기기를 Bluetooth로 제어하는 앱.</p>
+            <p class="desc-subtext">앱 요구사항은 ble peripheral검색, characteristic read/write, batch operation이었고, DFU는 고려사항이 아님.</p>
+
+            <p class="desc-subtext">macOS앱으로 제작하지만, iOS로 앱을 출시가능성이 있으므로 SwiftUI로 코드작성을 결정.</p>
+
+            <p class="desc-subtext">단일 Window앱이고, 하나의 기기에 대하여 여러디바이스(mac, iphone, ipad, android) 등등이 연결할 수 있으므로 앱 백그라운드 진입시 bt connection을 유지하지 않도록 앱을 Terminate시킴.</p>
+
+            <p class="desc-subtext">BLE전송 커맨드 중에 카메라ir관련 커맨드로 이미지를 자동촬영기능 구현.</p>
+            <p class="desc-subtext">촬영 -> 회전(n/360) -> 대기(s) -> 촬영 -> ... n회</p>
+            <p class="desc-subtext">해당 요구사항을 충족하도록 BLE Command를 담은 Batch Job을 만들고 Job을 Operation으로 처리하여 구현.</p>
+            <a href="https://apps.apple.com/kr/app/foldio360-control/id1645104171?mt=12">AppStore</a>
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">모바일 아이들나라</p>
+                <p class="year-text">20.4 ~ 22.12</p>
+            </div>
+            <p class="desc-text">LG U+</p>
+            <p class="desc-text">Native iOS (Swift, UIKit)
+                LG U+에서 서비스하는 아이들나라(어린이용 OTT) 서비스 중 iOS</p>
+            <p class="desc-subtext">신규개발 -> 기능 추가 업데이트 -> UI개편
+
+                <p class="desc-text">신규개발</p>
+                <p class="desc-subtext">신규개발시 Role은 개발자 6명 정규직4/프리랜서2 중 프리랜서1 - PA로 참여.</p>
+                <p class="desc-subtext">파트 중(OTT영상 재생용 플레이어 / 네트워크 클라이언트, 모델링 / 컨텐츠 목록, Logging / 퀴즈 등 인터렉션 화면 / Account Authrization, IAP, Settings, APNs, Custom Controls)</p>
+                <p class="desc-subtext">Account Authrization, IAP, Settings, APNs, Custom Controls를 담당</p>
+                <p class="desc-subtext">LG U+의 타 서비스에서 사용했던 코드 일부를 사용하자라는 의견과, 개발자들의 경험상의 이유로 MVC로 개발을 진행.</p>
+                <p class="desc-subtext">Singleton Pattern으로 각각의 매니저를 작성하고, property observer를 사용하여 Account의 타입과 auth상태에 따라서 상태를 유지해줄 수 있도록함</p>
+
+                <p class="desc-text">기능 추가 업데이트</p>
+                <p class="desc-subtext">PL로 프로젝트 진행.</p>
+                <p class="desc-subtext">컨텐츠 서버 통합으로 생각했으나, 서버 추가의 건이 되어버림.</p>
+
+                <p class="desc-subtext">신규개발시 진행했던 업무 외에 기존 컨텐츠 목록 진행했던 프리랜스2 - PA의 롤을 인계받음..</p>
+
+                <p class="desc-subtext">Swift Lint적용</p>
+                <p class="desc-subtext">네트워크 Codable모델들을 CodingKey를 정리하여 naming 규칙을 따르도록 수정.</p>
+
+                <p class="desc-subtext">기존 서버의 모델과 신규 서버의 모델struct가 상이하여 동일하게 사용할 수 있도록 POP형태로 리펙토링.</p>
+                <p class="desc-subtext">기존 컨텐츠 목록의 화면 구성인 다중 상속구조에서 POP형태로 리펙토링 </p>
+
+                <p class="desc-subtext">portrait orientation을 지원하도록 UI가 변경되나, 강제 회전옵션 및 landscape를 강제하는 화면이 존재하여 회전상태를 관리하는 매니저 작성.</p>
+
+                <p class="desc-text">UI개편</p>
+                <p class="desc-subtext">PL로 프로젝트 진행.</p>
+                <p class="desc-subtext">전체 컨텐츠를 1차원 목록에서 2차원 목록으로 변경 건.</p>
+
+                <p class="desc-subtext">기존 MVC에서 MVVM패턴으로 변경</p>
+                <p class="desc-subtext">RxSwift 사용제안하여 도입</p>
+
+                <p class="desc-subtext">각 메뉴의 화면과 별개로 각각의 화면은 서버의 편성에 따라 지정된 UI로 노출할 수 있도록 전체 구조변경.</p>
+                <p class="desc-subtext">화면별로 비즈니스 로직을 처리하는 ViewModel을 만들고, 필요한 컨텐츠를 가져올 수 있는 Repository와 Service를 만듦.</p>
+                <p class="desc-subtext">16개의 목록타입과 10종의 서버에서 수신되는 모델을 종속되지 않게 노출 할 수 있도록 진행.</p>
+                <a href="https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%EB%93%A4%EB%82%98%EB%9D%BC/id1521425764?mt=12">AppStore</a>
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">낭만여행 고성</p>
+                <p class="year-text">20.11 ~ 21.3</p>
+            </div>
+            <p class="desc-text">위고온</p>
+            <p class="desc-text">Hybrid iOS (Swift, UIKit), Android (Kotlin)</p>
+            <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.wegoon.romantrip">Google Play</a>
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">코오롱 통합결재</p>
+                <p class="year-text">20.2 ~ 20.4</p>
+            </div>
+            <p class="desc-text">코오롱 베니트</p>
+            <p class="desc-text">Native iOS (Swift, UIKit)</p>
+            <p class="desc-subtext">결재라인 관리 사내 서비스 앱 개발.
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">코오롱 의사소통채널통합</p>
+                <p class="year-text">19.4 ~ 20.2</p>
+            </div>
+            <p class="desc-text">코오롱 베니트 개발</p>
+            <p class="desc-text">Native iOS (Swift, UIKit)</p>
+            <p class="desc-subtext">사내 메선저
+                메시지, 스티커, 이모티콘 대화링크 등을 전달하는 업무용 메신저
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Mobile OCR iOS</p>
+                <p class="year-text">19.3 ~ 19.3</p>
+            </div>
+            <p class="desc-text">영남대학교</p>
+            <p class="desc-text">Native iOS Framework (Objective-C, Swift)</p>
+            <p class="desc-subtext">C++로 되어있는 OCR라이브러리를 static library로 포함하고,
+                카메라 스트림을 받아 라이브러리로 전달하여 신분증을 인식하는 화면을 제공하는 UI bundle을 포함한 프레임워크
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">인스타페이 iOS 개발</p>
+                <p class="year-text">18.12 ~ 19.2</p>
+            </div>
+            <p class="desc-text">(주)인스타페이</p>
+            <p class="desc-text">Native iOS Framework (Swift, Objective-C, UIKit)</p>
+            <p class="desc-subtext">은행연동하여 QR코드 인식 후 원화 혹은 암호화폐로 결제를 하도록 하는 앱.
+                발주사 자체 토큰을 이용한 결제기능이 있으나 지갑앱을 만든것은 아님
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">하나멤버스</p>
+                <p class="year-text">17.12 ~ 18.01</p>
+            </div>
+            <p class="desc-text">(주)하나INS</p>
+            <p class="desc-text">Native iOS 추가 개발 (Objective-C, UIKit)</p>
+            <p class="desc-subtext">하나멤버스 내 하나톡 채팅 기능 버그 수정
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">커리어넷 앱 개편</p>
+                <p class="year-text">17.09 ~ 18.02</p>
+            </div>
+            18.03 ~ 18.11 (9개월)
+            <p class="desc-text">커리어넷</p>
+            <p class="desc-text">Hybrid iOS (Swift, UIKit), Android (Kotlin)</p>
+            <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부.
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">연예인 굿즈 판매 플랫폼</p>
+                <p class="year-text">17.04 ~ 17.11</p>
+            </div>
+            <p class="desc-text">스윗튠</p>
+            <p class="desc-text">Hybrid iOS (Objective-C, UIKit), Android (Java)</p>
+            <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부, 유지보수
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">하나멤버스</p>
+                <p class="year-text">16.11 ~ 17.03</p>
+            </div>
+            <p class="desc-text">(주)하나INS</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">개발자 4인 PA
+                하나멤버스 내 하나톡 채팅 기능 구현
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Foldio 360</p>
+                <p class="year-text">16.07 ~ 16.09</p>
+            </div>
+            <p class="desc-text">(주)오렌지몽키</p>
+            <p class="desc-text">Native iOS (Swift, UIKit)</p>
+            <p class="desc-subtext">카메라 이미지 필터, BLE를 이용한 기기(턴테이블) 제어
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">W Balance</p>
+                <p class="year-text">15.09 ~ 16.06</p>
+            </div>
+            <p class="desc-text">(주)프로스펙스, (주)LG전자</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">BLE를 이용하여 신발내에 삽입된 기기 정보 수집, 표현하는 앱
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">휴맥스 캐스트</p>
+                <p class="year-text">15.07 ~ 15.08</p>
+            </div>
+            <p class="desc-text">휴맥스 디지털</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">네트워크 내부 host중 셋톱박스를 찾아서 연결하여 리모콘 기능을 수행하는 앱
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">판다린 중국어 회화</p>
+                <p class="year-text">15.06 ~ 15.06</p>
+            </div>
+            <p class="desc-text">판다린 차이나</p>
+            <p class="desc-text">Hybrid iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">WebRTC용 WebView패키징, 자바스크립트 인젝션 일부, 유지보수
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">U+ Webhard iOS</p>
+                <p class="year-text">15.04 ~ 15.05</p>
+            </div>
+            <p class="desc-text">(주)LG U+</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">LG U+ 웹하드. 파일 다운로드, 업로드
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">아라뱃길 미디어파사드 솔루션</p>
+                <p class="year-text">15.01 ~ 15.03</p>
+            </div>
+            <p class="desc-text">한국수자원공사</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">정서진 아라뱃길 여객터미널 옆 미디어파사드에 이미지 게시 요청 앱
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">SNUH 원격진료</p>
+                <p class="year-text">14.12 ~ 15.1</p>
+            </div>
+            <p class="desc-text">서울대학교 병원</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">의료진, 구급대간의 호출과 위치확인을 제공하는 앱 2종
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">U+Box iOS8 추가 개발</p>
+                <p class="year-text">14.07 ~ 14.11</p>
+            </div>
+            <p class="desc-text">(주)LG U+</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">LG U+ 클라우드 스토리지 서비스. 파일 다운로드, 업로드
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Keyss - 커스텀 키보드 iOS8</p>
+                <p class="year-text">13.09 ~ 13.09</p>
+            </div>
+            <p class="desc-text">TIMEIRT</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">iOS 8 Custom Keyboard Extension
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Bigture 리뉴얼</p>
+                <p class="year-text">13.11 ~ 14.10</p>
+            </div>
+            <p class="desc-text">(주)더클락웍스</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">iPhone, iPad App 2종을 Universal App으로 통합
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">U+Box 고도화 신규개발 3.x</p>
+                <p class="year-text">13.09 ~ 14.01</p>
+            </div>
+            <p class="desc-text">(주)LG U+</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">LG U+ 클라우드 스토리지 서비스. 파일 다운로드, 업로드
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">KDB 전통장터 & 학생공모전 앱개발</p>
+                <p class="year-text">13.04 ~ 13.08</p>
+            </div>
+            <p class="desc-text">(주)더클락웍스</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit), Android (JAVA)</p>
+            <p class="desc-subtext">기업은행 주체 전통공예 미술품 카다로그 앱
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Final Cut Pro 사용자용 Plug-in</p>
+                <p class="year-text">12.11 ~ 13.03</p>
+            </div>
+            <p class="desc-text">(주)캐스트웨어</p>
+            <p class="desc-text">Mac App Export Plug-in 개발 (Objective-C, Cocoa, SOAP)</p>
+            <p class="desc-subtext">Batch Exporter 플로그인 개발
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Bigture 기능 수정</p>
+                <p class="year-text">12.11 ~ 12.12</p>
+            </div>
+            <p class="desc-text">(주)더클락웍스</p>
+            <p class="desc-text">Native iPhone, iPad 앱 기능 추가 iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">어린이용 drawing앱, SNS
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">한국산업기술대 앱창업 지원사업</p>
+                <p class="year-text">12.07 ~ 12.12</p>
+            </div>
+            <p class="desc-text">중소기업청</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">시간표 공유 서비스
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">동아채널A용 Edius Plugin 개발</p>
+                <p class="year-text">12.02 ~ 12.02</p>
+            </div>
+            <p class="desc-text">(주)캐스트웨어</p>
+            <p class="desc-text">Edius Plug-in (C++, MFC)</p>
+            <p class="desc-subtext">Exporter 플러그인
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">DogTogether for iOS</p>
+                <p class="year-text">12.01 ~ 13.02</p>
+            </div>
+            <p class="desc-text">(주)바운다우코</p>
+            <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
+            <p class="desc-subtext">애견인 SNS
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Edius Plug-in 개발</p>
+                <p class="year-text">10.10 ~ 10.10</p>
+            </div>
+            <p class="desc-text">(주)캐스트웨어 개발 Edius Plug-in 버전 업</p>
+            <p class="desc-text">Edius Plug-in (C++, MFC)</p>
+            <p class="desc-subtext">Exporter 플러그인
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">모바일 트레이드 시스템 개발</p>
+                <p class="year-text">10.04 ~ 12.12</p>
+            </div>
+            <p class="desc-text">(주)이데일리</p>
+            <p class="desc-text">Native iPhone OS 3.1.2 ~ (Objective-C, UIKit)</p>
+            <p class="desc-subtext">MP트래블러 주식거래 앱
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">OpenAPI 기반의 차세대 CMS 중 NLE-Plugin 구성요소 모듈 개발</p>
+                <p class="year-text">10.01 ~ 10.02</p>
+            </div>
+            <p class="desc-text">(주)캐스트웨어</p>
+            <p class="desc-text">Edius Plug-in (C++, MFC)</p>
+            <p class="desc-subtext">Exporter 플러그인
+
+
+            </p>
+            <div class="float-wrap">
+                <br>
+                <p class="title-text">Nova II (Netmarble)</p>
+                <p class="year-text">09.04 ~ 10.02</p>
+            </div>
+            (주)아라마루 UI개발 CEGUI 커스터마이징</p>
+            <p class="desc-text">Windows (C++, Direct 3D)</p>
+            <p class="desc-subtext">게임 개발
+        </section>
     </div>
-
-<section>
-  <h2>CONTACT</h2>
-    <p>
-      <i class="fa fa-envelope" aria-hidden="true"></i>
-      <a href="mailto:juyeonlee@me.com">juyeonlee@me.com</a>
-    </p>
-    <p>
-      <i class="fa fa-github" aria-hidden="true"></i>
-      <a href="https://www.github.com/ssauma">Github</a>
-    </p>  
-</section>
-
-<section>
-  <h2>SKILLS</h2>
-  <div class="float-wrap">
-  <p class="desc-text">Swift</p>
-  <p class="desc-text">Objective-C</p>
-  </div>
-</section>
-
-<section>
-  <h2>ABOUT ME</h2>
-  <p class="about-me-text">iPhone OS 3.1.2부터 지금까지 iOS개발자 이주연입니다.</p>
-</section>
-
-<section>
-  <h2>EXPERIENCE</h2>
-<div class="float-wrap">
-<p class="title-text">Foldio 360 macOS App</p>
-    <p class="year-text">22.4 ~ 22.7</p>
-  </div>
-    <p class="desc-text">오랜지몽키 코리아</p>
-    <p class="desc-text">Image Editor (Swift, AppKit, SwiftUI)</p>
-  <p class="desc-subtext">1인 개발.</p>
-    <p class="desc-subtext">이미지를 여러장 입력받아 필터링과 크롭, 워터마크 블랜딩을 거친 후, 순차적으로 재생하는 GIF, MP4로 export를 수행하는 앱</p>
-    <p class="desc-subtext">OpenCV와 GPUImage를 기반으로 제작되고있던 앱의 성능개선과 완성을 진행.</p>
-    
-    <p class="desc-subtext">기존 필터적용과 크롭 방식이 CGImage를 순차적으로 생성하는 방식으로 실시간으로 변경된 이미지를 확인하기가 어렵고, export task 수행 시간이 32장 기준으로 5분 이상 소요.</p>
-
-    <p class="desc-subtext">기존 코드에서 OpenCV의 용도가 이미지 크롭과 앱 내부 필터 중 1개의 기능만 사용하는것을 확인.</p>
-    <p class="desc-subtext">GPUImage는 Obj-C, OpenGL을 활용한 이미지 프로세싱 오픈소스로 활동이 저조하며, 2018년 Apple이 OpenGL을 deprecate하여 Metal기반 오픈소스로 변경하기로 결정.</p>
-
-    <p class="desc-subtext">앱을 사용하는 중 이미지들을 프로젝트 형태로 저장하기 위해서 Document-Based App으로 프로젝트를 신규 생성</p>
-    <p class="desc-subtext">해당 Document는 foldio라는 확장자를 갖는 패키지 형태로 정보를 담는 json파일과 임포트한 이미지, 워터마크이미지를 저장하도록 함</p>
-
-    <p class="desc-subtext">변경되는 라이브러리로 인한 문제가 발생할 경우 타 라이브러리나 GPUImage로 회귀할 경우를 고려하여 렌터링 모듈을 DI형태로 전달하여 사용하기 위해 결국 기존 프로젝트를 버리고 새로 구성</p>
-    <p class="desc-subtext">라이브러리는 최근에 활동이 있고, 실제 프로덕트 레벨에서 레퍼런스가 존재하는 것으로 하기로하고 MetalPetal을 사용하기로 결정.
-    기존 OpenCV에서 사용하던 기능 중 필터1개는 Fragment Shader프로그램을 간단히 작성</p>
-
-    <p class="desc-subtext">앱 완성 후 임포트한 이미지에 필터적용 시간은 실시간처리됨.</p>
-    <p class="desc-subtext">export는 기존 300s -> 10s로 향상.</p>
-    <a href = "https://apps.apple.com/kr/app/foldio360-edit/id1643839760?mt=12">AppStore</a>
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Foldio 360 macOS App</p>
-    <p class="year-text">22.8 ~ 22.9</p>
-  </div>
-      <p class="desc-text">오랜지몽키 코리아</p>
-    <p class="desc-text">BLE Device control (Swift, SwiftUI)</p>
-  <p class="desc-subtext">1인 개발.</p>
-    <p class="desc-subtext">사진촬영용 턴테이블 기기를 Bluetooth로 제어하는 앱.</p>
-    <p class="desc-subtext">앱 요구사항은 ble peripheral검색, characteristic read/write, batch operation이었고, DFU는 고려사항이 아님.</p>
-    
-    <p class="desc-subtext">macOS앱으로 제작하지만, iOS로 앱을 출시가능성이 있으므로 SwiftUI로 코드작성을 결정.</p>
-
-    <p class="desc-subtext">단일 Window앱이고, 하나의 기기에 대하여 여러디바이스(mac, iphone, ipad, android) 등등이 연결할 수 있으므로 앱 백그라운드 진입시 bt connection을 유지하지 않도록 앱을 Terminate시킴.</p>
-
-    <p class="desc-subtext">BLE전송 커맨드 중에 카메라ir관련 커맨드로 이미지를 자동촬영기능 구현.</p>
-    <p class="desc-subtext">촬영 -> 회전(n/360) -> 대기(s) -> 촬영 -> ... n회</p>
-    <p class="desc-subtext">해당 요구사항을 충족하도록 BLE Command를 담은 Batch Job을 만들고 Job을 Operation으로 처리하여 구현.</p>
-<a href = "https://apps.apple.com/kr/app/foldio360-control/id1645104171?mt=12">AppStore</a>
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">모바일 아이들나라</p>
-    <p class="year-text">20.4 ~ 22.12</p>
-  </div>
-    <p class="desc-text">LG U+</p>
-    <p class="desc-text">Native iOS (Swift, UIKit)
-  LG U+에서 서비스하는 아이들나라(어린이용 OTT) 서비스 중 iOS</p>
-  <p class="desc-subtext">신규개발 -> 기능 추가 업데이트 -> UI개편
-
-  <p class="desc-text">신규개발</p>
-    <p class="desc-subtext">신규개발시 Role은 개발자 6명 정규직4/프리랜서2 중 프리랜서1 - PA로 참여.</p>
-    <p class="desc-subtext">파트 중(OTT영상 재생용 플레이어 / 네트워크 클라이언트, 모델링 / 컨텐츠 목록, Logging / 퀴즈 등 인터렉션 화면 / Account Authrization, IAP, Settings, APNs, Custom Controls)</p>
-    <p class="desc-subtext">Account Authrization, IAP, Settings, APNs, Custom Controls를 담당</p>
-    <p class="desc-subtext">LG U+의 타 서비스에서 사용했던 코드 일부를 사용하자라는 의견과, 개발자들의 경험상의 이유로 MVC로 개발을 진행.</p>
-    <p class="desc-subtext">Singleton Pattern으로 각각의 매니저를 작성하고, property observer를 사용하여 Account의 타입과 auth상태에 따라서 상태를 유지해줄 수 있도록함</p>
-
-  <p class="desc-text">기능 추가 업데이트</p>
-    <p class="desc-subtext">PL로 프로젝트 진행.</p>
-    <p class="desc-subtext">컨텐츠 서버 통합으로 생각했으나, 서버 추가의 건이 되어버림.</p>
-
-    <p class="desc-subtext">신규개발시 진행했던 업무 외에 기존 컨텐츠 목록 진행했던 프리랜스2 - PA의 롤을 인계받음..</p>
-    
-    <p class="desc-subtext">Swift Lint적용</p>
-    <p class="desc-subtext">네트워크 Codable모델들을 CodingKey를 정리하여 naming 규칙을 따르도록 수정.</p>
-
-    <p class="desc-subtext">기존 서버의 모델과 신규 서버의 모델struct가 상이하여 동일하게 사용할 수 있도록 POP형태로 리펙토링.</p>
-    <p class="desc-subtext">기존 컨텐츠 목록의 화면 구성인 다중 상속구조에서 POP형태로 리펙토링   </p>
-
-    <p class="desc-subtext">portrait orientation을 지원하도록 UI가 변경되나, 강제 회전옵션 및 landscape를 강제하는 화면이 존재하여 회전상태를 관리하는 매니저 작성.</p>
-
-  <p class="desc-text">UI개편</p>
-    <p class="desc-subtext">PL로 프로젝트 진행.</p>
-    <p class="desc-subtext">전체 컨텐츠를 1차원 목록에서 2차원 목록으로 변경 건.</p>
-
-    <p class="desc-subtext">기존 MVC에서 MVVM패턴으로 변경</p>
-    <p class="desc-subtext">RxSwift 사용제안하여 도입</p>
-    
-    <p class="desc-subtext">각 메뉴의 화면과 별개로 각각의 화면은 서버의 편성에 따라 지정된 UI로 노출할 수 있도록 전체 구조변경.</p>
-    <p class="desc-subtext">화면별로 비즈니스 로직을 처리하는 ViewModel을 만들고, 필요한 컨텐츠를 가져올 수 있는 Repository와 Service를 만듦.</p>
-    <p class="desc-subtext">16개의 목록타입과 10종의 서버에서 수신되는 모델을 종속되지 않게 노출 할 수 있도록 진행.</p>
-  <a href = "https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%EB%93%A4%EB%82%98%EB%9D%BC/id1521425764?mt=12">AppStore</a>
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">낭만여행 고성</p>
-    <p class="year-text">20.11 ~ 21.3</p>
-  </div>
-      <p class="desc-text">위고온</p>
-    <p class="desc-text">Hybrid iOS (Swift, UIKit), Android (Kotlin)</p>
-  <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부.</p>
-  <a href = "https://play.google.com/store/apps/details?id=com.wegoon.romantrip">Google Play</a>
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">코오롱 통합결재</p>
-    <p class="year-text">20.2 ~ 20.4</p>
-  </div>
-    <p class="desc-text">코오롱 베니트</p>
-    <p class="desc-text">Native iOS (Swift, UIKit)</p>
-  <p class="desc-subtext">결재라인 관리 사내 서비스 앱 개발.
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">코오롱 의사소통채널통합</p>
-    <p class="year-text">19.4 ~ 20.2</p>
-  </div>
-      <p class="desc-text">코오롱 베니트  개발</p>
-    <p class="desc-text">Native iOS (Swift, UIKit)</p>
-  <p class="desc-subtext">사내 메선저
-     메시지, 스티커, 이모티콘 대화링크 등을 전달하는 업무용 메신저
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Mobile OCR iOS</p>
-    <p class="year-text">19.3 ~ 19.3</p>
-  </div>
-    <p class="desc-text">영남대학교</p>
-    <p class="desc-text">Native iOS Framework (Objective-C, Swift)</p>
-  <p class="desc-subtext">C++로 되어있는 OCR라이브러리를 static library로 포함하고,
-    카메라 스트림을 받아 라이브러리로 전달하여 신분증을 인식하는 화면을 제공하는 UI bundle을 포함한 프레임워크
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">인스타페이 iOS 개발</p>
-    <p class="year-text">18.12 ~ 19.2</p>
-  </div>
-    <p class="desc-text">(주)인스타페이</p>
-    <p class="desc-text">Native iOS Framework (Swift, Objective-C, UIKit)</p>
-  <p class="desc-subtext">은행연동하여 QR코드 인식 후 원화 혹은 암호화폐로 결제를 하도록 하는 앱.
-    발주사 자체 토큰을 이용한 결제기능이 있으나 지갑앱을 만든것은 아님
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">하나멤버스</p>
-    <p class="year-text">17.12 ~ 18.01</p>
-  </div>
-    <p class="desc-text">(주)하나INS</p>
-    <p class="desc-text">Native iOS 추가 개발 (Objective-C, UIKit)</p>
-  <p class="desc-subtext">하나멤버스 내 하나톡 채팅 기능 버그 수정
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">커리어넷 앱 개편</p>
-    <p class="year-text">17.09 ~ 18.02</p>
-  </div>
-    18.03 ~ 18.11 (9개월)
-  <p class="desc-text">커리어넷</p>
-    <p class="desc-text">Hybrid iOS (Swift, UIKit), Android (Kotlin)</p>
-  <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부.
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">연예인 굿즈 판매 플랫폼</p>
-    <p class="year-text">17.04 ~ 17.11</p>
-  </div>
-    <p class="desc-text">스윗튠</p>
-    <p class="desc-text">Hybrid iOS (Objective-C, UIKit), Android (Java)</p>
-  <p class="desc-subtext">WebView패키징, 자바스크립트 인젝션 일부, 유지보수
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">하나멤버스</p>
-    <p class="year-text">16.11 ~ 17.03</p>
-  </div>
-    <p class="desc-text">(주)하나INS</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">개발자 4인 PA
-    하나멤버스 내 하나톡 채팅 기능 구현
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Foldio 360</p>
-    <p class="year-text">16.07 ~ 16.09</p>
-  </div>
-    <p class="desc-text">(주)오렌지몽키</p>
-    <p class="desc-text">Native iOS (Swift, UIKit)</p>
-  <p class="desc-subtext">카메라 이미지 필터, BLE를 이용한 기기(턴테이블) 제어
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">W Balance</p>
-    <p class="year-text">15.09 ~ 16.06</p>
-  </div>
-    <p class="desc-text">(주)프로스펙스, (주)LG전자</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">BLE를 이용하여 신발내에 삽입된 기기 정보 수집, 표현하는 앱
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">휴맥스 캐스트</p>
-    <p class="year-text">15.07 ~ 15.08</p>
-  </div>
-    <p class="desc-text">휴맥스 디지털</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">네트워크 내부 host중 셋톱박스를 찾아서 연결하여 리모콘 기능을 수행하는 앱
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">판다린 중국어 회화</p>
-    <p class="year-text">15.06 ~ 15.06</p>
-  </div>
-    <p class="desc-text">판다린 차이나</p>
-    <p class="desc-text">Hybrid iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">WebRTC용 WebView패키징, 자바스크립트 인젝션 일부, 유지보수
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">U+ Webhard iOS</p>
-    <p class="year-text">15.04 ~ 15.05</p>
-  </div>
-    <p class="desc-text">(주)LG U+</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">LG U+ 웹하드. 파일 다운로드, 업로드
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">아라뱃길 미디어파사드 솔루션</p>
-    <p class="year-text">15.01 ~ 15.03</p>
-  </div>
-    <p class="desc-text">한국수자원공사</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">정서진 아라뱃길 여객터미널 옆 미디어파사드에 이미지 게시 요청 앱
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">SNUH 원격진료</p>
-    <p class="year-text">14.12 ~ 15.1</p>
-  </div>
-    <p class="desc-text">서울대학교 병원</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">의료진, 구급대간의 호출과 위치확인을 제공하는 앱 2종
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">U+Box iOS8 추가 개발</p>
-    <p class="year-text">14.07 ~ 14.11</p>
-  </div>
-    <p class="desc-text">(주)LG U+</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">LG U+ 클라우드 스토리지 서비스. 파일 다운로드, 업로드
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Keyss - 커스텀 키보드 iOS8</p>
-    <p class="year-text">13.09 ~ 13.09</p>
-  </div>
-    <p class="desc-text">TIMEIRT</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">iOS 8 Custom Keyboard Extension
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Bigture 리뉴얼</p>
-    <p class="year-text">13.11 ~ 14.10</p>
-  </div>
-    <p class="desc-text">(주)더클락웍스</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">iPhone, iPad App 2종을 Universal App으로 통합
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">U+Box 고도화 신규개발 3.x</p>
-    <p class="year-text">13.09 ~ 14.01</p>
-  </div>
-    <p class="desc-text">(주)LG U+</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">LG U+ 클라우드 스토리지 서비스. 파일 다운로드, 업로드
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">KDB 전통장터 & 학생공모전 앱개발</p>
-    <p class="year-text">13.04 ~ 13.08</p>
-  </div>
-      <p class="desc-text">(주)더클락웍스</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit), Android (JAVA)</p>
-  <p class="desc-subtext">기업은행 주체 전통공예 미술품 카다로그 앱
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Final Cut Pro 사용자용 Plug-in</p>
-    <p class="year-text">12.11 ~ 13.03</p>
-  </div>
-    <p class="desc-text">(주)캐스트웨어</p>
-    <p class="desc-text">Mac App Export Plug-in 개발  (Objective-C, Cocoa, SOAP)</p>
-  <p class="desc-subtext">Batch Exporter 플로그인 개발
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Bigture 기능 수정</p>
-    <p class="year-text">12.11 ~ 12.12</p>
-  </div>
-      <p class="desc-text">(주)더클락웍스</p>
-    <p class="desc-text">Native iPhone, iPad 앱 기능 추가 iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">어린이용 drawing앱, SNS
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">한국산업기술대 앱창업 지원사업</p>
-    <p class="year-text">12.07 ~ 12.12</p>
-  </div>
-    <p class="desc-text">중소기업청</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">시간표 공유 서비스
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">동아채널A용 Edius Plugin 개발</p>
-    <p class="year-text">12.02 ~ 12.02</p>
-  </div>
-      <p class="desc-text">(주)캐스트웨어</p>
-    <p class="desc-text">Edius Plug-in (C++, MFC)</p>
-  <p class="desc-subtext">Exporter 플러그인
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">DogTogether for iOS</p>
-    <p class="year-text">12.01 ~ 13.02</p>
-  </div>
-    <p class="desc-text">(주)바운다우코</p>
-    <p class="desc-text">Native iOS (Objective-C, UIKit)</p>
-  <p class="desc-subtext">애견인 SNS
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Edius Plug-in 개발</p>
-    <p class="year-text">10.10 ~ 10.10</p>
-  </div>
-    <p class="desc-text">(주)캐스트웨어 개발   Edius Plug-in 버전 업</p>
-    <p class="desc-text">Edius Plug-in (C++, MFC)</p>
-  <p class="desc-subtext">Exporter 플러그인
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">모바일 트레이드 시스템 개발</p>
-    <p class="year-text">10.04 ~ 12.12</p>
-  </div>
-    <p class="desc-text">(주)이데일리</p>
-    <p class="desc-text">Native iPhone OS 3.1.2 ~ (Objective-C, UIKit)</p>
-  <p class="desc-subtext">MP트래블러 주식거래 앱
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">OpenAPI 기반의 차세대 CMS 중 NLE-Plugin 구성요소 모듈 개발</p>
-    <p class="year-text">10.01 ~ 10.02</p>
-  </div>
-      <p class="desc-text">(주)캐스트웨어</p>
-    <p class="desc-text">Edius Plug-in (C++, MFC)</p>
-  <p class="desc-subtext">Exporter 플러그인
-
-
-</p>
-<div class="float-wrap">
-<br>
-<p class="title-text">Nova II (Netmarble)</p>
-    <p class="year-text">09.04 ~ 10.02</p>
-  </div>
-    (주)아라마루 UI개발  CEGUI 커스터마이징</p>
-    <p class="desc-text">Windows (C++, Direct 3D)</p>
-  <p class="desc-subtext">게임 개발
-</section>
-</div>
-<br><br>
-  <footer>JuyeonLee@me.com</footer>
+    <br><br>
+    <footer>JuyeonLee@me.com</footer>
 </body>
+
 </html>

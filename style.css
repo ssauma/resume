@@ -26,6 +26,9 @@ a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+a {
+  font-size: 10px;
+}
 
 section {
   margin-bottom: 24px;
@@ -86,6 +89,12 @@ footer {
 
 .desc-text {
   font-size: 9px;
+}
+
+.summery-text {
+  font-size: 9px;
+  color: #282828;
+  padding-left: 16px;
 }
 
 .desc-subtext {
