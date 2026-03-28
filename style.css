@@ -9,7 +9,7 @@
 
 body {
     font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     color: #2d2d2d;
     background: #f5f5f7;
@@ -19,7 +19,6 @@ body {
 a {
     color: #0071e3;
     text-decoration: none;
-    transition: color 0.2s;
 }
 
 a:hover {
@@ -32,46 +31,46 @@ a:hover {
     margin: 40px auto;
     background: #fff;
     border-radius: 12px;
-    padding: 48px 48px 32px;
+    padding: 48px;
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* ── Header ── */
 .header {
     text-align: right;
-    margin-bottom: 36px;
-    padding-bottom: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
     border-bottom: 2px solid #1d1d1f;
 }
 
 .header h1 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: #1d1d1f;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .subtitle {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     color: #6e6e73;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .contact-row {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .contact-row a {
-    font-size: 13px;
+    font-size: 12px;
     color: #6e6e73;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
-    transition: color 0.2s;
+    gap: 4px;
 }
 
 .contact-row a:hover {
@@ -80,22 +79,22 @@ a:hover {
 
 /* ── Sections ── */
 section {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 h2 {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #1d1d1f;
     border-bottom: 1px solid #e5e5e7;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .about-me {
-    font-size: 14px;
+    font-size: 13px;
     color: #6e6e73;
     font-style: italic;
 }
@@ -104,24 +103,24 @@ h2 {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .skill-tag {
     display: inline-block;
-    padding: 4px 14px;
-    font-size: 13px;
+    padding: 3px 12px;
+    font-size: 12px;
     font-weight: 500;
     color: #1d1d1f;
     background: #f5f5f7;
     border: 1px solid #d2d2d7;
-    border-radius: 16px;
+    border-radius: 14px;
 }
 
 /* ── Job Entries ── */
 .job {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #f0f0f2;
 }
 
@@ -135,18 +134,20 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 12px;
-    margin-bottom: 4px;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
 }
 
 .job-header h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: #1d1d1f;
+    min-width: 0;
 }
 
 .period {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: #86868b;
     white-space: nowrap;
@@ -154,42 +155,42 @@ h2 {
 }
 
 .company {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: #6e6e73;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .tech {
-    font-size: 12px;
+    font-size: 11px;
     color: #86868b;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .role {
-    font-size: 13px;
+    font-size: 12px;
     color: #424245;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .job h4 {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #424245;
-    margin-top: 12px;
-    margin-bottom: 4px;
+    margin-top: 10px;
+    margin-bottom: 3px;
 }
 
 .details {
     list-style: none;
-    padding-left: 12px;
-    margin-bottom: 4px;
+    padding-left: 10px;
+    margin-bottom: 3px;
 }
 
 .details li {
-    font-size: 13px;
+    font-size: 12px;
     color: #424245;
-    line-height: 1.7;
+    line-height: 1.65;
     position: relative;
     padding-left: 10px;
 }
@@ -206,14 +207,13 @@ h2 {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: #0071e3;
-    margin-top: 6px;
-    padding: 3px 10px;
+    margin-top: 4px;
+    padding: 2px 8px;
     border: 1px solid #0071e3;
-    border-radius: 12px;
-    transition: background 0.2s, color 0.2s;
+    border-radius: 10px;
 }
 
 .app-link:hover {
@@ -224,27 +224,39 @@ h2 {
 /* ── Footer ── */
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: 13px;
+    padding: 16px;
+    font-size: 12px;
     color: #86868b;
 }
 
-/* ── Responsive ── */
+/* ── Mobile ── */
 @media (max-width: 720px) {
+    body {
+        background: #fff;
+    }
+
     .resume {
         margin: 0;
         border-radius: 0;
-        padding: 32px 24px 24px;
+        padding: 24px 20px;
         box-shadow: none;
     }
 
     .header h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
-    .job-header {
-        flex-direction: column;
-        gap: 2px;
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .contact-row {
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    .job-header h3 {
+        font-size: 13px;
     }
 
     .period {
@@ -256,7 +268,7 @@ footer {
 @media print {
     body {
         background: #fff;
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .resume {
@@ -271,16 +283,12 @@ footer {
         page-break-inside: avoid;
     }
 
-    a {
-        color: #1d1d1f;
-    }
+    a { color: #1d1d1f; }
 
     .app-link {
         border: none;
         padding: 0;
     }
 
-    footer {
-        display: none;
-    }
+    footer { display: none; }
 }
